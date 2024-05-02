@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Marks page</title>
+    <style>
+        .div {
+            text-align: center;
+            width: 200px; /* Set the width of the input boxes */
+            padding: 8px;
+            margin: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function fmark() {
+            var marks1 = parseInt(document.fmark1.marks1.value);
+            var marks2 = parseInt(document.fmark1.marks2.value);
+            var marks3 = parseInt(document.fmark1.marks3.value);
+            var totalMarks = marks1 + marks2 + marks3;
+            document.fmark1.totalmarks.value = totalMarks;
+            console.log("totalMarks" + totalMarks);
+        }
+    </script>
+</head>
+<body style="background-color: aquamarine; font-size: medium; text-align: center;">
+    <form name="fmark1">
+        <div class="div">
+            Enter marks 1 <input type="text" name="marks1" value=""> <br>
+            Enter marks 2 <input type="text" name="marks2" value=""> <br>
+            Enter marks 3 <input type="text" name="marks3" value=""> <br>
+            Total marks <input type="text" name="totalmarks" readonly>
+            <input type="button" value="Calculate Total" onclick="fmark()"/>
+        </div>
+    </form>
+</body>
+</html>
